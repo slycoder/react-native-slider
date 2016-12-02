@@ -252,7 +252,6 @@ var Slider = React.createClass({
     var minimumTrackStyle = {
       position: 'absolute',
       width: Animated.add(thumbLeft, thumbSize.width / 2),
-      marginTop: -trackSize.height,
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle
     };
@@ -277,7 +276,7 @@ var Slider = React.createClass({
             {
               transform: [
                 { translateX: thumbLeft },
-                { translateY: -(trackSize.height + thumbSize.height) / 2 }
+                { translateY: -(-trackSize.height + thumbSize.height) / 2 }
               ],
               ...valueVisibleStyle
             }
